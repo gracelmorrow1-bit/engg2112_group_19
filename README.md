@@ -2,7 +2,6 @@
 
 ## File Descriptions
 twosides_preprocessing.ipynb : maps TWOSIDES names to DrugBank IDs, removes duplicate rows, groups reactions into categories by finding the 50 most common reactions and grouping them (over a few repeats).
-    DATA: http://tatonettilab-resources.s3-website-us-west-1.amazonaws.com/?p=nsides/
 
 drugbank_smiles_extraction.ipynb: extracts DrugBank IDs and SMILES strings from the DrugBank full database XML file.
 
