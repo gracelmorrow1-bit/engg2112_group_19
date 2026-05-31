@@ -34,6 +34,6 @@ full database.xml  →  drugbank_smiles_extraction.ipynb  →  drugbank_smiles.c
                                                         chembert_embeddings.csv
                                                                 ↓
 TWOSIDES.csv  →  twosides_preprocessing.ipynb  →  twosides_edge_labels.csv
-                                                                ↓
-                                                            [ML Model]
-                                                    uses BOTH files together
+                                                      ↓
+                                                  [ML Model]
+                                          uses BOTH files together
