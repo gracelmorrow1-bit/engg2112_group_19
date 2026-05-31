@@ -2,7 +2,6 @@
 
 ## File Descriptions
 twosides_preprocessing.ipynb : maps TWOSIDES names to DrugBank IDs, removes duplicate rows, groups reactions into categories by finding the 50 most common reactions and grouping them (over a few repeats).
-    DATA: http://tatonettilab-resources.s3-website-us-west-1.amazonaws.com/?p=nsides/
 
 drugbank_smiles_extraction.ipynb: extracts DrugBank IDs and SMILES strings from the DrugBank full database XML file.
 
@@ -10,9 +9,13 @@ chembert_embeddings.ipynb: generates molecular embedding vectors for each drug u
 
 naive_bayes_baseline.ipynb: trains a Gaussian Naive Bayes classifier to predict the reaction category of a drug-drug interaction from ChemBERTa molecular embeddings.
 
-svm_baseline_binary.ipynb: trains a Support Vector Machine classifier to predict whether or not a meaningful reaction of a drug-drug interaction from ChemBERTa molecular embeddings.
-
 svm_baseline_pivot.ipynb: trains a Support Vector Machine classifier to predict the dominant reaction category of a drug-drug interaction from ChemBERTa molecular embeddings.
+
+logistic_regression_baseline.ipynb: trains a Logistic Regression classifier to predict the reaction category of a drug-drug interaction from ChemBERTa molecular embeddings.
+
+random_forest_baseline.ipynb: trains a Random Forest classifier to predict the reaction category of a drug-drug interaction from ChemBERTa molecular embeddings.
+
+GNN.ipynb: trains a GNN classifier to predict the reaction category of a drug-drug interaction from ChemBERTa molecular embeddings.
 
 
 ## File Run Order
@@ -29,8 +32,8 @@ full database.xml  →  drugbank_smiles_extraction.ipynb  →  drugbank_smiles.c
                                                         chembert_embeddings.ipynb
                                                                 ↓
                                                         chembert_embeddings.csv
-                                                      ↓
+                                                                ↓
 TWOSIDES.csv  →  twosides_preprocessing.ipynb  →  twosides_edge_labels.csv
-                                                      ↓
-                                                  [ML Model]
-                                          uses BOTH files together
+                                                                ↓
+                                                            [ML Model]
+                                                    uses BOTH files together
